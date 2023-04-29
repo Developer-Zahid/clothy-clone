@@ -1,0 +1,93 @@
+.banner{
+    padding-block: 6rem;
+
+    &__title{
+        display: flex;
+        justify-content: center;
+        gap: 0.5em;
+        @media (min-width: $banner-responsive--tablet) {
+            gap: 1em;
+        }
+        font-size: 3.5rem;
+        font-family: $font-secondary;
+        isolation: isolate;
+
+        &__text{
+            line-height: 1;
+        }
+
+        &__figure{
+            position: relative;
+
+            &__image{
+                position: absolute;
+                z-index: -1;
+                user-select: none;
+                pointer-events: none;
+            }
+        }
+
+        &--sm{
+            --spacing: 2rem;
+            @media (min-width: $banner-responsive--tablet) {
+                --spacing: 5rem;
+            }
+            padding-top: var(--spacing);
+            
+            .banner__title__figure{
+                flex-basis: 11rem;
+                @media (min-width: $banner-responsive--tablet) {
+                    flex-basis: 18rem;
+                }
+                @media (min-width: $banner-responsive--laptop) {
+                    flex-basis: 23rem;
+                }
+
+                &__image{
+                    top: calc(var(--spacing) * -1);
+                }
+            }
+        }
+        
+        &--md{
+            .banner__title{
+                &__figure{
+                    flex-basis: 5rem;
+                    @media (min-width: $banner-responsive--tablet) {
+                        flex-basis: 7rem;
+                    }
+                    @media (min-width: $banner-responsive--laptop) {
+                        flex-basis: 14rem;
+                    }
+    
+                    &__image{
+                        bottom: 0;
+                    }
+                }
+
+                &__text{
+                    font-size: 1.6em;
+                    @media (min-width: $banner-responsive--tablet) {
+                        font-size: 2em;
+                    }
+                    @media (min-width: $banner-responsive--laptop) {
+                        font-size: 4em;
+                    }
+                    line-height: 0.8;
+                }
+            }
+        }
+
+        &--lg{
+            .banner__title__text{
+                font-size: 2em;
+                @media (min-width: $banner-responsive--tablet) {
+                    font-size: 4em;
+                }
+                @media (min-width: $banner-responsive--laptop) {
+                    font-size: 6em;
+                }
+            }
+        }
+    }
+}

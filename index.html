@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOTHY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script defer src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/split-type"></script>
+    <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="navbar__logo">CLOTHY.</a>
+                <div id="responsive-navbar" class="navbar__nav navbar__nav--main">
+                    <a href="#!" class="navbar__nav__link">Men</a>
+                    <a href="#!" class="navbar__nav__link">Women</a>
+                    <a href="#!" class="navbar__nav__link">Accessories</a>
+                    <a href="#!" class="navbar__nav__link">Winter</a>
+                    <a href="#!" class="navbar__nav__link">Sale</a>
+                </div>
+                <div class="navbar__nav navbar__nav--icons">
+                    <button type="button" class="navbar__nav__link">
+                        <i class="fi fi-rr-search"></i>
+                    </button>
+                    <a href="#!" class="navbar__nav__link">
+                        <i class="fi fi-rr-heart"></i>
+                    </a>
+                    <a href="#!" class="navbar__nav__link navbar__nav__link--cart">
+                        <span class="navbar__nav__link__text">Cart</span>
+                        <span class="navbar__nav__link__count">0</span>
+                    </a>
+                    <button type="button" class="navbar__nav__link" data-toggle="menu">
+                        <span class="navbar__nav__link__icon navbar__nav__link__icon--before">
+                            <i class="fi fi-rr-apps-add"></i>
+                        </span>
+                        <span class="navbar__nav__link__icon navbar__nav__link__icon--after">
+                            <i class="fi fi-rr-cross"></i>
+                        </span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__title banner__title--sm">
+                <h1 class="banner__title__text" text-split words-slide-up>Clothes</h1>
+                <figure class="banner__title__figure">
+                    <img src="./assets/images/banner/banner_image-1.jpg" alt="model" loading="lazy" class="banner__title__figure__image" />
+                </figure>
+                <h1 class="banner__title__text" text-split words-slide-up>Are</h1>
+            </div>
+            <div class="banner__title banner__title--lg">
+                <h1 class="banner__title__text" text-split words-slide-up>The Spirit</h1>
+            </div>
+            <div class="banner__title banner__title--md">
+                <figure class="banner__title__figure">
+                    <img src="./assets/images/banner/banner_image-2.jpg" alt="model" loading="lazy" class="banner__title__figure__image" />
+                </figure>
+                <h1 class="banner__title__text" text-split words-slide-up>Of Fashion</h1>
+            </div>
+        </div>
+    </section>
+    <section class="about section-gap">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__grid__col">
+                    <figure class="about__figure">
+                        <svg class="about__figure__curve about__figure__curve--left" viewBox="0 0 1050 100" xmlns="http://www.w3.org/2000/svg">
+                            <path class="about__figure__curve__path" id="curvePathLeft" d="M1 1C23.3301 26.7321 148.606 87.2783 257.607 82.7373C393.858 77.0611 466.525 5.54096 615.267 5.54096C764.008 5.54096 850.3 60.0325 885.498 73.6554C971.791 107.053 1009.26 100.901 1049 91.8192" fill="transparent"/>
+                            <text>
+                                <textPath class="about__figure__curve__text" href="#curvePathLeft" startOffset="0">BE PREPARED FOR COMPLIMENTS</textPath>
+                            </text>
+                        </svg>
+                        <svg class="about__figure__curve about__figure__curve--right" viewBox="0 0 1050 100" xmlns="http://www.w3.org/2000/svg">
+                            <path class="about__figure__curve__path" id="curvePathLeft" d="M1 1C23.3301 26.7321 148.606 87.2783 257.607 82.7373C393.858 77.0611 466.525 5.54096 615.267 5.54096C764.008 5.54096 850.3 60.0325 885.498 73.6554C971.791 107.053 1009.26 100.901 1049 91.8192" fill="transparent"/>
+                            <text>
+                                <textPath class="about__figure__curve__text" href="#curvePathLeft" startOffset="0">WHEN WEARING THIS CORNDOG TEE</textPath>
+                            </text>
+                        </svg>
+                        <img src="./assets/images/about/about.png" alt="about" loading="lazy" class="about__figure__image">
+                    </figure>
+                </div>
+                <div class="about__grid__col">
+                    <h1 class="about__grid__title">Orginal Design</h1>
+                    <p class="about__grid__text">Everything on this is site designed by yours truly and only available at Clothy.</p>
+                </div>
+                <div class="about__grid__col">
+                    <h1 class="about__grid__title">Free Shipping</h1>
+                    <p class="about__grid__text">Enjoy free USPS shipping in the United States for orders $45 and more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="min-height: 100vh;"></div>
+    <div style="min-height: 100vh;"></div>
+</body>
+</html>

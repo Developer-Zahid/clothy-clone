@@ -1,0 +1,84 @@
+@import './abstracts/variables';
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: $font-primary;
+}
+
+i{
+    line-height: 0;
+    display: inline-block;
+}
+
+a,
+button
+{
+    color: inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+svg{
+    overflow: visible;
+}
+
+img,
+svg{
+    display: block;
+    max-width: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.container{
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1140px;
+    padding-inline: 15px;
+}
+
+[text-split]{
+    opacity: 0;
+}
+
+.word{
+    overflow: hidden;
+    padding: 0.1em;
+    margin: -0.1em;
+}
+
+.section-gap{
+    padding-block: 6rem;
+    @media (min-width: $media--tablet) {
+        padding-block: 10rem;
+    }
+}
+
+@import './layouts/_header';
+@import './sections/banner';
+@import './sections/about';

@@ -1,0 +1,105 @@
+.header{
+    background-color: #ffffff;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5em;
+
+    &__logo{
+        font-size: 3rem;
+        font-family: $font-secondary;
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+
+        &--main{
+            @media (max-width: $mobile-menu--show) {
+                position: fixed;
+                z-index: 999;
+                background-color: #ffffff;
+                flex-direction: column;
+                align-items: flex-start;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                transform: translateX(-100%);
+                padding-inline: 2em;
+                transition:
+                    box-shadow 0.6s cubic-bezier(0.33, 1, 0.68, 1),
+                    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+
+                &.show{
+                    box-shadow:
+                        1px 0 0 rgba($color: #000000, $alpha: 1),
+                        0.5em 0 1em rgba($color: #000000, $alpha: 0.02);
+                    transform: translateX(0);
+                }
+
+                .navbar__nav__link{
+                    &:first-child{
+                        margin-top: auto;
+                    }
+                    &:last-child{
+                        margin-bottom: auto;
+                    }
+                }
+            }
+        }
+
+        &--icons{
+            .navbar__nav__link{
+                font-size: 1em;
+            }
+        }
+
+        &__link{
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 1.4rem;
+            padding-block: 0.5em;
+            padding-inline: 0.8em;
+            @media (min-width: $menu-icon-text--show) {
+                padding-inline: 1.5em;
+            }
+            background-color: transparent;
+            border: 0;
+
+            &__text{
+                @media (max-width: $menu-icon-text--hide) {
+                    display: none;
+                }
+            }
+
+            &__count{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                $size: 2.5rem;
+                width: $size;
+                height: $size;
+                border-radius: 50rem;
+                font-size: 0.9em;
+                color: #ffffff;
+                background-color: #000000;
+            }
+
+            &[data-toggle="menu"]{
+                @media (min-width: $mobile-menu--hide){
+                    display: none;
+                }
+
+                &:not(.show) .navbar__nav__link__icon--after,
+                &.show .navbar__nav__link__icon--before
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+}

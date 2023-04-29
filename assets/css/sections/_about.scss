@@ -1,0 +1,96 @@
+.about{
+    position: relative;
+    &__figure{
+        &__curve{
+            position: absolute;
+            transform: translateY(2em);
+            width: 45%;
+
+            &--left{
+                left: 0;
+            }
+
+            &--right{
+                right: 0;
+            }
+
+            &__text{
+                font-size: 7rem;
+                font-family: $font-secondary;
+            }
+        }
+        &__image{
+            margin-inline: auto;
+        }
+    }
+    &__grid{
+        @media (min-width: $media--tablet) {
+            display: grid;
+            align-items: flex-end;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                '. center center .'
+                'left left right right'; 
+        }
+        @media (max-width: ($media--tablet - 1px)) {
+            grid-template-rows: 1fr 1fr;
+        }
+        @media (min-width: $media--laptop) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 'left center right';
+        }
+
+        &__col{
+            margin-block-end: 3rem;
+            padding-inline: 15px;
+            @media (max-width: ($media--laptop - 1px)){
+                text-align: center;
+            }
+
+            &:nth-of-type(1){
+                grid-area: center;
+            }
+            &:nth-of-type(2){
+                grid-area: left;
+            }
+            &:nth-of-type(3){
+                grid-area: right;
+            }
+            
+            @media (min-width: $media--laptop){
+                &:nth-of-type(2),
+                &:nth-of-type(3)
+                {
+                    padding-block-end: 7rem;
+                }
+            }
+        }
+
+        &__title{
+            position: relative;
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 500;
+            padding-block-end: 0.6em;
+            margin-block-end: 0.6em;
+
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                @media (max-width: ($media--laptop - 1px)){
+                    right: 0;
+                    margin-inline: auto;
+                }
+                height: 1px;
+                width: 2.5em;
+                background-color: #000000;
+            }
+        }
+
+        &__text{
+            font-size: 1em;
+        }
+    }
+}
