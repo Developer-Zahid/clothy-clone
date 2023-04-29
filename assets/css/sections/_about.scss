@@ -4,14 +4,23 @@
         &__curve{
             position: absolute;
             transform: translateY(2em);
-            width: 45%;
+            width: 100%;
+            @media (min-width: $media--tablet){
+                width: 45%;
+            }
 
             &--left{
                 left: 0;
+                @media (max-width: ($media--tablet - 1px)){
+                    transform: translateY(5em);
+                }
             }
 
             &--right{
                 right: 0;
+                @media (max-width: ($media--tablet - 1px)){
+                    transform: translateY(10em);
+                }
             }
 
             &__text{

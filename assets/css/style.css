@@ -270,13 +270,28 @@ svg {
 .about__figure__curve {
   position: absolute;
   transform: translateY(2em);
-  width: 45%;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .about__figure__curve {
+    width: 45%;
+  }
 }
 .about__figure__curve--left {
   left: 0;
 }
+@media (max-width: 599px) {
+  .about__figure__curve--left {
+    transform: translateY(5em);
+  }
+}
 .about__figure__curve--right {
   right: 0;
+}
+@media (max-width: 599px) {
+  .about__figure__curve--right {
+    transform: translateY(10em);
+  }
 }
 .about__figure__curve__text {
   font-size: 7rem;
